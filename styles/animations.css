@@ -1,0 +1,79 @@
+/* ============================================================
+   ANIMATIONS — Keyframes e classes de animação do Todo App
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   SLIDE-IN — Ao adicionar nova tarefa
+   ---------------------------------------------------------- */
+
+.todo-item--animating-in {
+  opacity: 0;
+  transform: translateY(-16px);
+  pointer-events: none;
+}
+
+.todo-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ----------------------------------------------------------
+   FADE-OUT — Ao remover tarefa
+   ---------------------------------------------------------- */
+
+.todo-item--removing {
+  opacity: 0;
+  transform: translateX(20px);
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-width: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   KEYFRAMES — Para uso futuro em animações elaboradas
+   ---------------------------------------------------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 100px;
+  }
+}
