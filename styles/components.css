@@ -34,6 +34,13 @@
   background: transparent;
 }
 
+/* Remove todos os outlines do input — o :focus-within no grupo já indica foco */
+.todo-input:focus,
+.todo-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .todo-input::placeholder {
   color: var(--color-text-subtle);
 }
